@@ -9,11 +9,11 @@ export function TopBar() {
 
   return (
     <div className="border-b border-foreground/20 bg-foreground text-background">
-      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-4 py-1.5 text-[11px] font-mono uppercase tracking-[0.18em]">
+      <div className="mx-auto flex max-w-[1200px] items-center justify-between gap-4 px-4 py-1.5 text-[10px] font-mono uppercase tracking-[0.15em]">
         <div className="flex items-center gap-4">
           <span>Thứ Năm, 28 tháng 5, 2026</span>
           <span className="hidden sm:inline opacity-70">|</span>
-          <span className="hidden sm:inline opacity-70">Ha Noi · 28°C</span>
+          <span className="hidden sm:inline opacity-70">Hà Nội · 28°C</span>
         </div>
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-1.5 hover:text-accent transition-colors">
@@ -23,7 +23,7 @@ export function TopBar() {
           <button
             onClick={() => setSearchOpen(!searchOpen)}
             className="hover:text-accent transition-colors p-1"
-            aria-label="Search"
+            aria-label="Tìm kiếm"
           >
             {searchOpen ? <X className="size-4" /> : <Search className="size-4" />}
           </button>
@@ -37,15 +37,15 @@ export function TopBar() {
             <form className="flex items-center gap-3">
               <input
                 type="text"
-                placeholder="Tim kiem bai viet..."
+                placeholder="Tìm kiếm bài viết..."
                 className="flex-1 bg-background/10 border border-background/30 px-4 py-2 text-sm text-background placeholder:text-background/50 focus:outline-none focus:border-accent"
                 autoFocus
               />
               <button
                 type="submit"
-                className="bg-accent px-6 py-2 text-[11px] font-mono uppercase tracking-[0.2em] text-background hover:bg-accent/80 transition-colors"
+                className="bg-accent px-6 py-2 text-[10px] font-mono uppercase tracking-[0.15em] text-background hover:bg-accent/80 transition-colors"
               >
-                Tim
+                Tìm
               </button>
             </form>
           </div>

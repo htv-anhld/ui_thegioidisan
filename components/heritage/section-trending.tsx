@@ -6,57 +6,57 @@ import { TrendingUp } from "lucide-react"
 const TRENDING = [
   {
     img: "/images/hero-heritage.png",
-    title: "Crystal Palace giu vien hoan bang du Am 2 doi lang danh xau choi",
-    excerpt: "Danh sach chi hon mot trieu nguoi dang ky tham gia chuong trinh.",
-    time: "2 gio truoc",
+    title: "Crystal Palace giữ viện hoàn bảng dù Anh đội lăng danh xấu chơi",
+    excerpt: "Danh sách chi hơn một triệu người đăng ký tham gia chương trình.",
+    time: "2 giờ trước",
   },
   {
     img: "/images/heritage-1.png",
-    title: "Lo an hang cua nhan vien Techcom",
-    time: "3 gio truoc",
+    title: "Lộ ăn hàng của nhân viên Techcombank",
+    time: "3 giờ trước",
   },
   {
     img: "/images/heritage-2.png",
-    title: "Truong hoc Khan nam xu ly viec nguoi la xam nhap",
-    time: "4 gio truoc",
+    title: "Trường học Khánh Nam xử lý việc người lạ xâm nhập",
+    time: "4 giờ trước",
   },
   {
     img: "/images/heritage-3.png",
-    title: "Lam the nao de hay su nghiep thanh cong khi da 40",
-    time: "5 gio truoc",
+    title: "Làm thế nào để hay sự nghiệp thành công khi đã 40",
+    time: "5 giờ trước",
   },
   {
     img: "/images/heritage-4.png",
-    title: "Gach set nuong ban can so che lam giau nguyen tac",
-    time: "6 gio truoc",
+    title: "Gạch sét nướng bản cần số chế làm giàu nguyên tắc",
+    time: "6 giờ trước",
   },
   {
     img: "/images/heritage-5.png",
-    title: "Tuong loan Quan doan, ngay xua tung la mot nguoi linh",
-    time: "Hom qua",
+    title: "Tướng loạn Quân đoàn, ngày xưa từng là một người lính",
+    time: "Hôm qua",
   },
 ]
 
 const MOST_READ = [
-  { title: "Thuat Long Thang coi su luot yeu biet de mat viec", img: "/images/heritage-1.png" },
-  { title: "My Premiers League, man de tuoi de dieu gan", img: "/images/heritage-2.png" },
-  { title: "HSBC nguoi Viet Thang sang gia nhat Premier League", img: "/images/heritage-3.png" },
-  { title: "Bo Cong Thuong tong co thu voi hang hoa TQ", img: "/images/heritage-4.png" },
-  { title: "Bi Cong Thuong nguy co thu tu hang hoa TQ sang QPTP", img: "/images/heritage-5.png" },
+  { title: "Thuật Long Thắng coi sự lượt yêu biết để mất việc", img: "/images/heritage-1.png" },
+  { title: "Mỹ Premiers League, màn để tuổi đề điều gần", img: "/images/heritage-2.png" },
+  { title: "HSBC người Việt Thắng sang giá nhất Premier League", img: "/images/heritage-3.png" },
+  { title: "Bộ Công Thương tổng cố thủ với hàng hóa TQ", img: "/images/heritage-4.png" },
+  { title: "Bí Công Thương nguy cơ thu từ hàng hóa TQ sang QPTP", img: "/images/heritage-5.png" },
 ]
 
 export function SectionTrending() {
   const [featured, ...rest] = TRENDING
 
   return (
-    <section className="bg-foreground text-background py-10">
+    <section className="bg-foreground text-background py-8">
       <div className="mx-auto max-w-[1200px] px-4">
-        <div className="flex items-center gap-2 mb-6">
-          <TrendingUp className="size-5 text-accent" />
-          <h2 className="font-serif text-xl font-bold text-accent">TRENDING</h2>
+        <div className="flex items-center gap-2 mb-5">
+          <TrendingUp className="size-4 text-accent" />
+          <h2 className="font-serif text-base font-bold text-accent">XU HƯỚNG</h2>
         </div>
 
-        <div className="grid grid-cols-12 gap-6">
+        <div className="grid grid-cols-12 gap-5">
           {/* Featured trending */}
           <div className="col-span-12 lg:col-span-4">
             <article className="group cursor-pointer">
@@ -68,10 +68,10 @@ export function SectionTrending() {
                   className="object-cover transition-transform duration-500 group-hover:scale-[1.02]"
                 />
               </div>
-              <h3 className="mt-3 font-serif text-lg font-bold leading-tight group-hover:text-accent transition-colors">
+              <h3 className="mt-3 font-serif text-base font-bold leading-tight group-hover:text-accent transition-colors">
                 {featured.title}
               </h3>
-              <p className="mt-2 text-sm text-background/70 line-clamp-2">
+              <p className="mt-2 text-[13px] text-background/70 line-clamp-2">
                 {featured.excerpt}
               </p>
               <span className="mt-2 block text-[10px] font-mono uppercase tracking-wider text-background/50">
@@ -93,7 +93,7 @@ export function SectionTrending() {
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />
                   </div>
-                  <h4 className="mt-2 font-serif text-xs leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                  <h4 className="mt-2 font-serif text-[11px] leading-snug group-hover:text-accent transition-colors line-clamp-2">
                     {item.title}
                   </h4>
                 </article>
@@ -104,13 +104,13 @@ export function SectionTrending() {
           {/* Most read sidebar */}
           <aside className="col-span-12 lg:col-span-3">
             <div className="border-l border-background/20 pl-4">
-              <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent mb-4">
-                Doc nhieu
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.15em] text-accent mb-4">
+                Đọc nhiều
               </h3>
-              <ul className="space-y-4">
+              <ul className="space-y-3">
                 {MOST_READ.map((item, i) => (
                   <li key={i} className="group cursor-pointer flex gap-3">
-                    <div className="relative w-16 h-12 shrink-0 overflow-hidden">
+                    <div className="relative w-14 h-10 shrink-0 overflow-hidden">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -118,7 +118,7 @@ export function SectionTrending() {
                         className="object-cover"
                       />
                     </div>
-                    <h4 className="flex-1 font-serif text-sm leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                    <h4 className="flex-1 font-serif text-[11px] leading-snug group-hover:text-accent transition-colors line-clamp-2">
                       {item.title}
                     </h4>
                   </li>

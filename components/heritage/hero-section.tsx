@@ -4,54 +4,54 @@ import Image from "next/image"
 
 const MAIN_NEWS = {
   img: "/images/hero-heritage.png",
-  cat: "Tieu diem",
-  title: "Co do Hue: hoi sinh ky uc tren nhung buc tuong reu phong",
-  excerpt: "Tu Dai Noi den lang tam, cac nha bao ton dang dung cong nghe so hoa de hoi sinh nhung hoa van, mang cham khac da bi thoi gian xoa mo.",
-  author: "Le Minh Khoi",
-  time: "2 gio truoc"
+  cat: "Tiêu điểm",
+  title: "Cố đô Huế: Hồi sinh ký ức trên những bức tường rêu phong",
+  excerpt: "Từ Đại Nội đến lăng tẩm, các nhà bảo tồn đang dùng công nghệ số hóa để hồi sinh những hoa văn, mảng chạm khắc đã bị thời gian xóa mờ.",
+  author: "Lê Minh Khôi",
+  time: "2 giờ trước"
 }
 
 const SIDE_NEWS = [
   {
     img: "/images/heritage-1.png",
-    title: "Phan dau nam 2026 hoan thanh so hoa 100% cac di san van hoa da duoc xep hang",
-    time: "3 gio truoc"
+    title: "Phấn đấu năm 2026 hoàn thành số hóa 100% các di sản văn hóa đã được xếp hạng",
+    time: "3 giờ trước"
   },
   {
     img: "/images/heritage-2.png", 
-    title: "Hoi thao khoa hoc ve Thuong thu Ninh Ton: ket noi ky uc lich su voi hien tai",
-    time: "5 gio truoc"
+    title: "Hội thảo khoa học về Thượng thư Ninh Tốn: Kết nối ký ức lịch sử với hiện tại",
+    time: "5 giờ trước"
   },
   {
     img: "/images/heritage-3.png",
-    title: "Bac Ninh don nhan Bang cua UNESCO va khai mac Festival Ve mien di san 2026",
-    time: "Hom qua"
+    title: "Bắc Ninh đón nhận Bằng của UNESCO và khai mạc Festival Về miền di sản 2026",
+    time: "Hôm qua"
   },
 ]
 
 const SMALL_NEWS = [
-  { title: "Cu Lao Cham - tong quan ve khao co, lich su va van hoa", cat: "Di san" },
-  { title: "Kien truc chua, thap thoi Tran o Thuong cang Van Don", cat: "Kien truc" },
-  { title: "Nhung trai nghiem am thuc doc ban khi den Sa Pa", cat: "Am thuc" },
-  { title: "Trung bay 156 hinh tuong Lenin tai Bao tang Lich su", cat: "Su kien" },
+  { title: "Cù Lao Chàm - Tổng quan về khảo cổ, lịch sử và văn hóa", cat: "Di sản" },
+  { title: "Kiến trúc chùa, tháp thời Trần ở Thương cảng Vân Đồn", cat: "Kiến trúc" },
+  { title: "Những trải nghiệm ẩm thực độc bản khi đến Sa Pa", cat: "Ẩm thực" },
+  { title: "Trưng bày 156 hình tượng Lênin tại Bảo tàng Lịch sử", cat: "Sự kiện" },
 ]
 
 const MOST_READ = [
-  { title: "Khong con smartphone 'gia tot'?", views: "12.5K" },
-  { title: "Ly do Ronaldo khoc khi mat penalty", views: "10.2K" },
-  { title: "HCMC van con hang nghin can nha dot nat", views: "8.7K" },
-  { title: "Xu ly the nao voi nguoi gac chan xe lua?", views: "7.3K" },
+  { title: "Không còn smartphone 'giá tốt'?", views: "12.5K" },
+  { title: "Lý do Ronaldo khóc khi hỏng penalty", views: "10.2K" },
+  { title: "TP.HCM vẫn còn hàng nghìn căn nhà đột nát", views: "8.7K" },
+  { title: "Xử lý thế nào với người gác chắn xe lửa?", views: "7.3K" },
 ]
 
 export function HeroSection() {
   return (
-    <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1200px] px-4 py-4">
-        <div className="grid grid-cols-12 gap-4">
+    <section className="border-b border-foreground/10">
+      <div className="mx-auto max-w-[1200px] px-4 py-6">
+        <div className="grid grid-cols-12 gap-5">
           {/* Main featured article - Left column */}
           <div className="col-span-12 lg:col-span-5">
             <article className="group cursor-pointer">
-              <div className="relative aspect-[4/3] overflow-hidden border border-foreground/15">
+              <div className="relative aspect-[4/3] overflow-hidden border border-foreground/10">
                 <Image
                   src={MAIN_NEWS.img}
                   alt={MAIN_NEWS.title}
@@ -77,13 +77,13 @@ export function HeroSection() {
             </article>
 
             {/* Small news list below main */}
-            <div className="mt-4 space-y-3 border-t border-foreground/15 pt-4">
+            <div className="mt-4 space-y-2 border-t border-foreground/10 pt-4">
               {SMALL_NEWS.map((item, i) => (
                 <article key={i} className="group cursor-pointer flex items-start gap-2">
-                  <span className="text-accent font-serif text-lg leading-none">•</span>
+                  <span className="text-accent font-serif text-base leading-none mt-1">•</span>
                   <div>
-                    <span className="text-[10px] font-mono uppercase tracking-wider text-accent">{item.cat}</span>
-                    <h4 className="font-serif text-sm leading-snug group-hover:text-accent transition-colors">
+                    <span className="text-[9px] font-mono uppercase tracking-wider text-accent">{item.cat}</span>
+                    <h4 className="font-serif text-[13px] leading-snug group-hover:text-accent transition-colors">
                       {item.title}
                     </h4>
                   </div>
@@ -93,10 +93,10 @@ export function HeroSection() {
           </div>
 
           {/* Middle column - stacked news */}
-          <div className="col-span-12 lg:col-span-4 space-y-4">
+          <div className="col-span-12 lg:col-span-4 space-y-3">
             {SIDE_NEWS.map((item, i) => (
               <article key={i} className="group cursor-pointer flex gap-3">
-                <div className="relative w-28 h-20 shrink-0 overflow-hidden border border-foreground/15">
+                <div className="relative w-[110px] h-[75px] shrink-0 overflow-hidden border border-foreground/10">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -105,7 +105,7 @@ export function HeroSection() {
                   />
                 </div>
                 <div className="flex-1 min-w-0">
-                  <h3 className="font-serif text-sm font-semibold leading-snug group-hover:text-accent transition-colors line-clamp-3">
+                  <h3 className="font-serif text-[13px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-3">
                     {item.title}
                   </h3>
                   <span className="mt-1 block text-[10px] font-mono uppercase tracking-wider text-foreground/50">
@@ -117,7 +117,7 @@ export function HeroSection() {
 
             {/* Center banner */}
             <div 
-              className="relative h-[100px] overflow-hidden border border-foreground/15 bg-paper-dark/30"
+              className="relative h-[90px] overflow-hidden border border-foreground/10 bg-paper-dark/20 mt-4"
               data-banner-slot="hero-center"
             >
               <Image
@@ -126,8 +126,8 @@ export function HeroSection() {
                 fill
                 className="object-cover opacity-80"
               />
-              <div className="absolute inset-0 flex items-center justify-center bg-foreground/40">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-background/80">Quang cao</span>
+              <div className="absolute inset-0 flex items-center justify-center bg-foreground/30">
+                <span className="text-[10px] font-mono uppercase tracking-wider text-background/80">Quảng cáo</span>
               </div>
             </div>
           </div>
@@ -136,7 +136,7 @@ export function HeroSection() {
           <aside className="col-span-12 lg:col-span-3 space-y-4">
             {/* Banner slot */}
             <div 
-              className="relative aspect-[3/4] overflow-hidden border border-foreground/15 bg-paper-dark/30"
+              className="relative aspect-[4/5] overflow-hidden border border-foreground/10 bg-paper-dark/20"
               data-banner-slot="hero-sidebar"
             >
               <Image
@@ -148,21 +148,21 @@ export function HeroSection() {
             </div>
 
             {/* Most read */}
-            <div className="border border-foreground/15 bg-paper-dark/20 p-4">
-              <h3 className="font-mono text-[11px] uppercase tracking-[0.2em] text-foreground border-b border-foreground/20 pb-2 mb-3">
-                Doc nhieu
+            <div className="border border-foreground/10 bg-paper-dark/10 p-3">
+              <h3 className="font-mono text-[10px] uppercase tracking-[0.15em] text-foreground border-b border-foreground/15 pb-2 mb-3">
+                Đọc nhiều
               </h3>
-              <ul className="space-y-3">
+              <ul className="space-y-2">
                 {MOST_READ.map((item, i) => (
                   <li key={i} className="group cursor-pointer flex items-start gap-2">
-                    <span className="font-serif text-lg font-bold text-accent leading-none w-5">
+                    <span className="font-serif text-base font-bold text-accent leading-none w-4 shrink-0">
                       {i + 1}
                     </span>
                     <div className="flex-1 min-w-0">
-                      <h4 className="font-serif text-sm leading-snug group-hover:text-accent transition-colors">
+                      <h4 className="font-serif text-[12px] leading-snug group-hover:text-accent transition-colors">
                         {item.title}
                       </h4>
-                      <span className="text-[10px] font-mono text-foreground/50">{item.views} luot xem</span>
+                      <span className="text-[9px] font-mono text-foreground/50">{item.views} lượt xem</span>
                     </div>
                   </li>
                 ))}
