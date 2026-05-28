@@ -1,5 +1,4 @@
 import Image from "next/image"
-import { BannerSlot } from "./banner-slot"
 
 const SIDE = [
   {
@@ -93,10 +92,6 @@ export function HeroSection() {
               </li>
             ))}
           </ul>
-          {/* Banner slot below news list */}
-          <div className="mt-4">
-            <BannerSlot id="hero-sidebar" width={300} height={250} className="w-full" />
-          </div>
         </aside>
       </div>
     </section>
