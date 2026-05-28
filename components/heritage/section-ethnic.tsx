@@ -31,7 +31,7 @@ const ITEMS = [
 export function SectionEthnic() {
   return (
     <section className="border-b border-foreground/15 bg-paper-warm/40">
-      <div className="mx-auto max-w-[1440px] px-4 py-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-12">
         <SectionHeading title="Dân tộc thiểu số" subtitle="Ethnic Heritage" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {ITEMS.map((it, i) => (
@@ -41,7 +41,7 @@ export function SectionEthnic() {
                   src={it.img || "/placeholder.svg"}
                   alt={it.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">

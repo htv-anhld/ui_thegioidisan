@@ -95,7 +95,7 @@ export function SectionTimeNews() {
 
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1440px] px-4 py-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-12">
         <SectionHeading title="Theo dòng thời sự" subtitle="Daily Heritage News" />
 
         <div className="mb-6 flex flex-wrap items-center gap-2">
@@ -122,7 +122,7 @@ export function SectionTimeNews() {
                 src={lead.img || "/placeholder.svg"}
                 alt={lead.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
               />
             </div>
             <div className="mt-4">
@@ -150,7 +150,7 @@ export function SectionTimeNews() {
                     src={it.img || "/placeholder.svg"}
                     alt={it.title}
                     fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="min-w-0">

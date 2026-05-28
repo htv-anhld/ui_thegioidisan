@@ -28,7 +28,7 @@ const ITEMS = [
 export function SectionSeaIslands() {
   return (
     <section className="border-b border-foreground/15 bg-paper-warm/40">
-      <div className="mx-auto max-w-[1440px] px-4 py-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-12">
         <SectionHeading
           title="Di sản & Chủ quyền biển đảo"
           subtitle="Sea · Islands · Sovereignty"
@@ -41,7 +41,7 @@ export function SectionSeaIslands() {
                   src={it.img || "/placeholder.svg"}
                   alt={it.title}
                   fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <span className="absolute left-3 top-3 bg-accent px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-background">
                   {it.cat}

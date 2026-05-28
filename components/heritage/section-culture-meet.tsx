@@ -20,7 +20,7 @@ const SIDE = [
 export function SectionCultureMeet() {
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1440px] px-4 py-12">
+      <div className="mx-auto max-w-[1280px] px-4 py-12">
         <SectionHeading title="Điểm hẹn văn hoá" subtitle="Culture · Festival · Travel" />
         <div className="grid grid-cols-12 gap-6">
           <article className="col-span-12 md:col-span-7 group cursor-pointer">
@@ -29,7 +29,7 @@ export function SectionCultureMeet() {
                 src={FEATURED.img || "/placeholder.svg"}
                 alt={FEATURED.title}
                 fill
-                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">

@@ -12,29 +12,29 @@ import { SectionForumWithSidebar } from "@/components/heritage/section-forum-sid
 import { PhotoGallery } from "@/components/heritage/photo-gallery"
 import { Newsletter } from "@/components/heritage/newsletter"
 import { SiteFooter } from "@/components/heritage/site-footer"
-import { FullWidthBanner } from "@/components/heritage/banner-slot"
 
 export default function Page() {
   return (
-    <div className="min-h-screen bg-background text-foreground">
-      <TopBar />
-      <Masthead />
-      <MainNav />
-      <TickerHeadlines />
-      <main>
-        <HeroSection />
-        <SectionTimeNews />
-        <FullWidthBanner id="banner-1" height={90} />
-        <SectionSeaIslands />
-        <SectionCultureMeet />
-        <FullWidthBanner id="banner-2" height={90} />
-        <SectionEthnic />
-        <SectionPreservation />
-        <SectionForumWithSidebar />
-        <PhotoGallery />
-      </main>
-      <Newsletter />
-      <SiteFooter />
+    <div className="relative min-h-screen bg-background text-foreground paper-grain">
+      <div className="map-overlay pointer-events-none fixed inset-0 z-0" aria-hidden="true" />
+      <div className="relative z-10">
+        <TopBar />
+        <Masthead />
+        <MainNav />
+        <main>
+          <HeroSection />
+          <TickerHeadlines />
+          <SectionTimeNews />
+          <SectionSeaIslands />
+          <SectionCultureMeet />
+          <SectionEthnic />
+          <SectionPreservation />
+          <SectionForumWithSidebar />
+          <PhotoGallery />
+          <Newsletter />
+        </main>
+        <SiteFooter />
+      </div>
     </div>
   )
 }
