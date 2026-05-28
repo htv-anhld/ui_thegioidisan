@@ -65,6 +65,7 @@
 
   --color-paper: var(--paper);
   --color-paper-dark: var(--paper-dark);
+  --color-paper-warm: oklch(0.9 0.04 75);
   --color-ink: var(--ink);
   --color-ink-faded: var(--ink-faded);
   --color-sepia: var(--sepia);
@@ -208,6 +209,49 @@
     color: var(--sepia);
     font-weight: 900;
   }
+
+  /* Newsroom-friendly aliases */
+  .paper-grain {
+    position: relative;
+  }
+  .paper-grain::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='g'><feTurbulence type='fractalNoise' baseFrequency='1.1' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.25 0 0 0 0 0.18 0 0 0 0 0.08 0 0 0 0.10 0'/></filter><rect width='100%25' height='100%25' filter='url(%23g)'/></svg>");
+    opacity: 0.55;
+    mix-blend-mode: multiply;
+  }
+
+  .sepia-strong {
+    filter: sepia(0.65) contrast(0.95) brightness(0.92) saturate(0.8);
+  }
+
+  /* Marquee ticker */
+  @keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .ticker-track {
+    animation: ticker 60s linear infinite;
+    width: max-content;
+  }
+  .ticker-track:hover { animation-play-state: paused; }
+
+  /* Stamped corner card */
+  .stamp-corner::before,
+  .stamp-corner::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: var(--background);
+    border: 2px solid oklch(0.22 0.04 40 / 0.8);
+  }
+  .stamp-corner::before { top: -8px; left: -8px; border-radius: 50%; }
+  .stamp-corner::after { bottom: -8px; right: -8px; border-radius: 50%; }
 
   /* Map overlay */
   .map-overlay {
