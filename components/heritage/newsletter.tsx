@@ -2,41 +2,34 @@ import { Mail } from "lucide-react"
 
 export function Newsletter() {
   return (
-    <section className="mx-auto max-w-4xl px-6 py-20">
-      <div className="relative border-2 border-double border-sepia/60 bg-paper p-10 paper-burn">
-        <span className="tape -top-3 left-1/2 -translate-x-1/2 -rotate-2" aria-hidden="true" />
-        <div className="text-center">
-          <Mail className="mx-auto h-8 w-8 text-rust" />
-          <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.3em] text-rust">
-            Đăng ký phát hành
-          </p>
-          <h2 className="mt-3 font-display text-3xl font-bold italic text-ink md:text-4xl">
-            Nhận Báo Di Sản qua thư bưu điện
-          </h2>
-          <p className="mx-auto mt-4 max-w-xl font-serif text-base leading-relaxed text-ink-faded">
-            Mỗi nửa tháng một số. Chuyên đề mới, hồ sơ lưu trữ chưa công bố, và những bộ ảnh
-            quý hiếm — gửi thẳng đến hộp thư của quý độc giả.
-          </p>
-
-          <form className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row">
+    <section className="bg-[#1a1a2e] py-12">
+      <div className="mx-auto max-w-[1200px] px-4">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-4">
+            <div className="w-12 h-12 bg-accent rounded-full flex items-center justify-center">
+              <Mail className="h-6 w-6 text-white" />
+            </div>
+            <div>
+              <h2 className="text-white text-lg font-bold">Đăng ký nhận tin</h2>
+              <p className="text-white/60 text-sm">Cập nhật tin tức mới nhất về di sản văn hóa</p>
+            </div>
+          </div>
+          
+          <form className="flex w-full md:w-auto gap-2">
             <input
               type="email"
               required
-              placeholder="thuong.dinh@email.vn"
+              placeholder="Email của bạn"
               aria-label="Địa chỉ email"
-              className="flex-1 border border-sepia/50 bg-paper-dark/30 px-4 py-3 font-mono text-sm text-ink placeholder:text-ink-faded/60 focus:border-rust focus:outline-none"
+              className="flex-1 md:w-80 bg-white/10 border border-white/20 px-4 py-3 text-sm text-white placeholder:text-white/40 rounded focus:border-accent focus:outline-none"
             />
             <button
               type="submit"
-              className="border border-sepia bg-sepia px-6 py-3 font-mono text-xs uppercase tracking-[0.25em] text-paper transition hover:bg-rust hover:border-rust"
+              className="bg-accent px-6 py-3 text-sm font-semibold text-white rounded hover:bg-accent/90 transition-colors"
             >
               Đăng ký
             </button>
           </form>
-
-          <p className="mt-4 font-hand text-lg text-ink-faded">
-            — miễn phí · huỷ bất cứ lúc nào —
-          </p>
         </div>
       </div>
     </section>

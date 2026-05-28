@@ -1,101 +1,93 @@
 import Image from "next/image"
-import { SectionHeading } from "./section-heading"
 
-const SUBTABS = ["Vật thể", "Phi vật thể", "Lễ hội", "Tâm linh"]
+const SUBTABS = ["Tất cả", "Vật thể", "Phi vật thể", "Lễ hội", "Tâm linh"]
 
 const FEATURED = {
-  img: "/images/heritage-1.png",
+  img: "https://picsum.photos/500/350?random=90",
   cat: "Phi vật thể",
   title: "Ra mắt Câu lạc bộ Di sản áo dài Việt Nam tại Lào",
-  excerpt:
-    "Tối 9/3/2026 tại thủ đô Vientiane, Câu lạc bộ trực thuộc Quỹ Hỗ trợ bảo tồn di sản chính thức ra mắt cộng đồng kiều bào.",
+  excerpt: "Tối 9/3/2026 tại thủ đô Vientiane, Câu lạc bộ trực thuộc Quỹ Hỗ trợ bảo tồn di sản chính thức ra mắt.",
+  time: "2 giờ trước",
 }
 
 const ITEMS = [
-  {
-    img: "/images/heritage-2.png",
-    cat: "Vật thể",
-    title: "Ngựa làm quen và trở thành bản sắc Việt qua các triều đại",
-  },
-  {
-    img: "/images/heritage-4.png",
-    cat: "Hội hoạ",
-    title: "Cuộc thi vẽ tranh Di sản văn hoá Việt Nam qua hội hoạ lần thứ II",
-  },
-  {
-    img: "/images/heritage-5.png",
-    cat: "Phi vật thể",
-    title: "Hội Di sản Văn hoá Việt Nam khép lại một năm sôi động",
-  },
-  {
-    img: "/images/heritage-3.png",
-    cat: "Du lịch",
-    title: "Bước ngoặt cáp treo Fansipan và vị thế của Sa Pa trên bản đồ châu Á",
-  },
+  { img: "https://picsum.photos/280/200?random=91", cat: "Vật thể", title: "Ngựa làm quen và trở thành bản sắc Việt qua các triều đại" },
+  { img: "https://picsum.photos/280/200?random=92", cat: "Hội hoạ", title: "Cuộc thi vẽ tranh Di sản văn hoá Việt Nam lần thứ II" },
+  { img: "https://picsum.photos/280/200?random=93", cat: "Phi vật thể", title: "Hội Di sản Văn hoá Việt Nam khép lại một năm sôi động" },
+  { img: "https://picsum.photos/280/200?random=94", cat: "Du lịch", title: "Bước ngoặt cáp treo Fansipan và vị thế của Sa Pa" },
 ]
 
 export function SectionPreservation() {
   return (
-    <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1440px] px-4 py-12">
-        <SectionHeading title="Bảo tồn & Phát triển" subtitle="Preservation & Development" />
+    <section className="bg-muted/30 py-8 border-b border-border">
+      <div className="mx-auto max-w-[1200px] px-4">
+        {/* Section header */}
+        <div className="flex items-center justify-between mb-4">
+          <div className="flex items-center gap-2">
+            <div className="w-1 h-6 bg-purple-600 rounded"></div>
+            <h2 className="text-xl font-bold uppercase">Bảo tồn & Phát triển</h2>
+          </div>
+        </div>
 
-        <div className="mb-6 flex flex-wrap gap-x-6 gap-y-2 border-b border-dashed border-foreground/30 pb-3">
+        {/* Subtabs */}
+        <div className="flex items-center gap-1 mb-6 border-b border-border pb-3">
           {SUBTABS.map((s, i) => (
-            <a
+            <button
               key={s}
-              href="#"
-              className={`font-mono text-[11px] uppercase tracking-[0.22em] transition-colors ${
+              className={`px-3 py-1.5 text-sm font-medium rounded transition-colors ${
                 i === 0
-                  ? "text-accent border-b-2 border-accent pb-1"
-                  : "text-foreground/60 hover:text-foreground"
+                  ? "bg-accent text-white"
+                  : "text-muted-foreground hover:text-foreground hover:bg-white"
               }`}
             >
-              Di sản văn hoá {s}
-            </a>
+              {s}
+            </button>
           ))}
         </div>
 
         <div className="grid grid-cols-12 gap-6">
-          <article className="col-span-12 lg:col-span-6 group cursor-pointer">
-            <div className="relative aspect-[4/3] overflow-hidden border border-foreground/15">
-              <Image
-                src={FEATURED.img || "/placeholder.svg"}
-                alt={FEATURED.title}
-                fill
-                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-            </div>
-            <div className="mt-4">
-              <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
-                {FEATURED.cat}
-              </span>
-              <h3 className="mt-2 font-serif text-2xl font-bold leading-tight text-balance group-hover:text-accent transition-colors">
-                {FEATURED.title}
-              </h3>
-              <p className="mt-2 font-serif text-base leading-relaxed text-foreground/75 text-pretty">
-                {FEATURED.excerpt}
-              </p>
-            </div>
-          </article>
-
-          <div className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4">
-            {ITEMS.map((it, i) => (
-              <article key={i} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] overflow-hidden border border-foreground/15">
+          {/* Featured */}
+          <article className="col-span-12 lg:col-span-6 group">
+            <a href="#" className="block">
+              <div className="img-zoom rounded overflow-hidden mb-3">
+                <div className="relative aspect-[4/3]">
                   <Image
-                    src={it.img || "/placeholder.svg"}
-                    alt={it.title}
+                    src={FEATURED.img}
+                    alt={FEATURED.title}
                     fill
-                    className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.04]"
+                    className="object-cover"
                   />
                 </div>
-                <span className="mt-3 block font-mono text-[10px] uppercase tracking-[0.22em] text-accent">
-                  {it.cat}
-                </span>
-                <h4 className="mt-1 font-serif text-base font-semibold leading-snug text-pretty group-hover:text-accent transition-colors">
-                  {it.title}
-                </h4>
+              </div>
+              <span className="text-accent text-xs font-semibold">{FEATURED.cat}</span>
+              <h3 className="text-xl font-bold leading-snug mt-1 group-hover:text-accent transition-colors">
+                {FEATURED.title}
+              </h3>
+              <p className="text-muted-foreground text-sm mt-2">{FEATURED.excerpt}</p>
+              <span className="text-muted-foreground text-xs mt-2 block">{FEATURED.time}</span>
+            </a>
+          </article>
+
+          {/* Grid of 4 */}
+          <div className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4">
+            {ITEMS.map((it, i) => (
+              <article key={i} className="group">
+                <a href="#" className="block">
+                  <div className="img-zoom rounded overflow-hidden mb-2">
+                    <div className="relative aspect-[4/3]">
+                      <Image
+                        src={it.img}
+                        alt={it.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                  </div>
+                  <span className="text-accent text-xs font-semibold">{it.cat}</span>
+                  <h4 className="text-sm font-semibold leading-snug mt-1 group-hover:text-accent transition-colors line-clamp-2">
+                    {it.title}
+                  </h4>
+                </a>
               </article>
             ))}
           </div>
