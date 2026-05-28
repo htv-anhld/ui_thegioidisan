@@ -122,7 +122,7 @@ export function SectionTimeNews() {
                 src={lead.img || "/placeholder.svg"}
                 alt={lead.title}
                 fill
-                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
             </div>
             <div className="mt-4">
@@ -150,7 +150,7 @@ export function SectionTimeNews() {
                     src={it.img || "/placeholder.svg"}
                     alt={it.title}
                     fill
-                    className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-105"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
                 </div>
                 <div className="min-w-0">

@@ -41,7 +41,7 @@ export function SectionEthnic() {
                   src={it.img || "/placeholder.svg"}
                   alt={it.title}
                   fill
-                  className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.04]"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.04]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">

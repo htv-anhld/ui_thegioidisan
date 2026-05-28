@@ -29,7 +29,7 @@ export function SectionCultureMeet() {
                 src={FEATURED.img || "/placeholder.svg"}
                 alt={FEATURED.title}
                 fill
-                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
+                className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
               <div className="absolute inset-x-0 bottom-0 p-6">

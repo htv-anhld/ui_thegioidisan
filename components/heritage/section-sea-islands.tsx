@@ -41,7 +41,7 @@ export function SectionSeaIslands() {
                   src={it.img || "/placeholder.svg"}
                   alt={it.title}
                   fill
-                  className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
+                  className="object-cover transition-transform duration-700 group-hover:scale-[1.03]"
                 />
                 <span className="absolute left-3 top-3 bg-accent px-2.5 py-1 font-mono text-[10px] uppercase tracking-[0.2em] text-background">
                   {it.cat}

@@ -34,7 +34,7 @@ export function HeroSection() {
               src="/images/hero-heritage.png"
               alt="Cố đô Huế"
               fill
-              className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.02]"
+              className="object-cover transition-transform duration-700 group-hover:scale-[1.02]"
               priority
             />
             <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
