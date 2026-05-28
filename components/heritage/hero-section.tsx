@@ -1,4 +1,5 @@
 import Image from "next/image"
+import { BannerSlot } from "./banner-slot"
 
 const SIDE = [
   {
@@ -13,7 +14,7 @@ const SIDE = [
   },
   {
     cat: "Diễn đàn",
-    title: "Phải cụ thể hoá nội hàm “bản sắc văn hoá dân tộc trong kiến trúc” khi sửa Luật 2019",
+    title: 'Phải cụ thể hoá nội hàm "bản sắc văn hoá dân tộc trong kiến trúc" khi sửa Luật 2019',
     time: "Hôm qua",
   },
   {
@@ -21,19 +22,14 @@ const SIDE = [
     title: "Bắc Ninh: đón nhận Bằng của UNESCO và khai mạc Festival Về miền di sản 2026",
     time: "Hôm qua",
   },
-  {
-    cat: "Tin vắn",
-    title: "Trưng bày “156 hình tượng Lênin” tại Bảo tàng Lịch sử Quốc gia",
-    time: "2 ngày trước",
-  },
 ]
 
 export function HeroSection() {
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto grid max-w-[1280px] grid-cols-12 gap-6 px-4 py-8">
+      <div className="mx-auto grid max-w-[1440px] grid-cols-12 gap-6 px-4 py-8">
         {/* Big lead */}
-        <article className="col-span-12 lg:col-span-8 group">
+        <article className="col-span-12 lg:col-span-7 group">
           <div className="relative aspect-[16/9] overflow-hidden border border-foreground/15">
             <Image
               src="/images/hero-heritage.png"
@@ -68,7 +64,7 @@ export function HeroSection() {
         </article>
 
         {/* Side list */}
-        <aside className="col-span-12 lg:col-span-4">
+        <aside className="col-span-12 lg:col-span-5">
           <div className="flex items-center justify-between border-b-2 border-foreground pb-2">
             <h3 className="font-serif text-lg font-bold uppercase tracking-wider">Tin mới</h3>
             <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/60">
@@ -97,6 +93,10 @@ export function HeroSection() {
               </li>
             ))}
           </ul>
+          {/* Banner slot below news list */}
+          <div className="mt-4">
+            <BannerSlot id="hero-sidebar" width={300} height={250} className="w-full" />
+          </div>
         </aside>
       </div>
     </section>

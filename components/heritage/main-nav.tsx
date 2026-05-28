@@ -14,7 +14,7 @@ const NAV = [
 export function MainNav() {
   return (
     <nav className="sticky top-0 z-30 border-y border-foreground/20 bg-foreground text-background shadow-sm">
-      <div className="mx-auto flex max-w-[1280px] items-center overflow-x-auto px-2">
+      <div className="mx-auto flex max-w-[1440px] flex-wrap items-center justify-center px-2">
         {NAV.map((item) => (
           <a
             key={item.label}
