@@ -5,171 +5,156 @@ import { useState } from "react"
 import { SectionHeading } from "./section-heading"
 
 const TABS = [
+  { id: "video", label: "VIDEO" },
+  { id: "webcast", label: "WEBCAST" },
+  { id: "longform", label: "LONGFORM" },
+  { id: "photo", label: "ANH" },
+  { id: "quiz", label: "QUIZ" },
+]
+
+const MEDIA_ITEMS = [
   {
-    label: "Theo dòng thời sự",
-    items: [
-      {
-        img: "/images/heritage-2.png",
-        cat: "Thời sự",
-        title: "Phấn đấu hoàn thành số hoá 100% di sản đã xếp hạng vào năm 2026",
-        excerpt:
-          "Bộ VHTTDL công bố kế hoạch chuyển đổi số toàn diện hệ thống di tích, bảo tàng trên cả nước.",
-        time: "28.05.2026",
-      },
-      {
-        img: "/images/heritage-3.png",
-        cat: "Sự kiện",
-        title: "Bắc Ninh đón nhận Bằng UNESCO và khai mạc Festival Về miền di sản 2026",
-        excerpt:
-          "Lễ hội quy tụ hàng trăm nghệ nhân quan họ, tranh Đông Hồ, gốm Phù Lãng cùng nhiều di sản phi vật thể.",
-        time: "27.05.2026",
-      },
-      {
-        img: "/images/heritage-4.png",
-        cat: "Diễn đàn",
-        title: "Cụ thể hoá nội hàm “bản sắc văn hoá dân tộc” khi sửa Luật Kiến trúc",
-        excerpt:
-          "Các kiến trúc sư, nhà nghiên cứu góp ý sâu rộng cho dự thảo sửa đổi Luật Kiến trúc 2019.",
-        time: "26.05.2026",
-      },
-    ],
+    img: "/images/hero-heritage.png",
+    title: "Thay may anh vao cau Long Bien sau gan 6 thang tram trong",
+    time: "2 gio truoc",
+    isVideo: true,
   },
   {
-    label: "Ẩm thực",
-    items: [
-      {
-        img: "/images/heritage-3.png",
-        cat: "Ẩm thực",
-        title: "Những trải nghiệm ẩm thực “độc bản” không thể bỏ lỡ khi đến Sa Pa",
-        excerpt: "Từ thắng cố đêm sương đến cá hồi nướng lá rừng — bản đồ vị giác của vùng cao.",
-        time: "28.05.2026",
-      },
-      {
-        img: "/images/heritage-1.png",
-        cat: "Làng nghề",
-        title: "Bánh khô mè Cẩm Lệ — hương vị Đà thành đi qua ba thế kỷ",
-        excerpt: "Nghệ nhân cuối cùng của làng vẫn giữ lò than và cối đá để giữ chất truyền thống.",
-        time: "26.05.2026",
-      },
-      {
-        img: "/images/heritage-2.png",
-        cat: "Ẩm thực",
-        title: "La Maison 1888 tại InterContinental Đà Nẵng tiếp tục giữ sao Michelin",
-        excerpt: "Nhà hàng Việt mang triết lý ẩm thực thuộc địa Pháp được vinh danh năm thứ ba.",
-        time: "24.05.2026",
-      },
-    ],
+    img: "/images/heritage-2.png",
+    title: "TPHCM chuyen doi hoan toan sang xe dien",
+    time: "5 gio truoc",
   },
   {
-    label: "Di sản đó đây",
-    items: [
-      {
-        img: "/images/hero-heritage.png",
-        cat: "Di sản",
-        title: "Cù Lao Chàm — tổng quan về khảo cổ, lịch sử và văn hoá",
-        excerpt: "Hòn ngọc giữa biển từng là cảng thị sầm uất của Champa và Đại Việt.",
-        time: "27.05.2026",
-      },
-      {
-        img: "/images/heritage-5.png",
-        cat: "Khảo cổ",
-        title: "Bãi Cọi — nơi gặp gỡ các nền văn hoá ven sông Hà Tĩnh",
-        excerpt: "Phát hiện khảo cổ bước ra với công chúng qua trưng bày chuyên đề.",
-        time: "25.05.2026",
-      },
-      {
-        img: "/images/heritage-4.png",
-        cat: "Kiến trúc",
-        title: "Kiến trúc chùa, tháp thời Trần ở Thương cảng Vân Đồn",
-        excerpt: "Lớp đất biển đảo Đông Bắc đang dần hé lộ một di sản thương mại sầm uất.",
-        time: "23.05.2026",
-      },
-    ],
+    img: "/images/heritage-3.png",
+    title: "Cong ty di dong xep hang Khamenei chon 'khong tuong lai'",
+    time: "Hom qua",
+  },
+]
+
+const SIDEBAR_ITEMS = [
+  {
+    img: "/images/heritage-4.png",
+    title: "iPhone gap su co manh khong tu xu ly duoc",
+    source: "Zing",
+  },
+  {
+    img: "/images/heritage-5.png",
+    title: "Thi truong bat dong san khoi sac tro lai",
+    source: "Zing",
+  },
+  {
+    img: "/images/heritage-1.png",
+    title: "Nguoi dan mong cho giam gia xang",
+    source: "Zing",
   },
 ]
 
 export function SectionTimeNews() {
-  const [active, setActive] = useState(0)
-  const t = TABS[active]
-  const [lead, ...rest] = t.items
+  const [activeTab, setActiveTab] = useState("video")
 
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
-        <SectionHeading title="Theo dòng thời sự" subtitle="Daily Heritage News" />
-
-        <div className="mb-6 flex flex-wrap items-center gap-2">
-          {TABS.map((tab, i) => (
-            <button
-              key={tab.label}
-              onClick={() => setActive(i)}
-              className={`px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.2em] border transition-colors ${
-                i === active
-                  ? "bg-foreground text-background border-foreground"
-                  : "bg-transparent text-foreground/70 border-foreground/30 hover:border-foreground hover:text-foreground"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-12 gap-6">
-          {/* Lead */}
-          <article className="col-span-12 md:col-span-6 group cursor-pointer">
-            <div className="relative aspect-[4/3] overflow-hidden border border-foreground/15">
-              <Image
-                src={lead.img || "/placeholder.svg"}
-                alt={lead.title}
-                fill
-                className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-[1.03]"
-              />
-            </div>
-            <div className="mt-4">
-              <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
-                {lead.cat}
-              </span>
-              <h3 className="mt-2 font-serif text-2xl md:text-3xl font-bold leading-tight text-balance group-hover:text-accent transition-colors">
-                {lead.title}
-              </h3>
-              <p className="mt-3 font-serif text-base leading-relaxed text-foreground/75 text-pretty">
-                {lead.excerpt}
-              </p>
-              <span className="mt-3 inline-block font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/50">
-                {lead.time}
-              </span>
-            </div>
-          </article>
-
-          {/* Side list */}
-          <div className="col-span-12 md:col-span-6 flex flex-col divide-y divide-foreground/15">
-            {rest.map((it, i) => (
-              <article key={i} className="group flex gap-4 py-4 first:pt-0 cursor-pointer">
-                <div className="relative size-28 shrink-0 overflow-hidden border border-foreground/15">
-                  <Image
-                    src={it.img || "/placeholder.svg"}
-                    alt={it.title}
-                    fill
-                    className="object-cover sepia-strong transition-transform duration-700 group-hover:scale-105"
-                  />
-                </div>
-                <div className="min-w-0">
-                  <span className="font-mono text-[10px] uppercase tracking-[0.25em] text-accent">
-                    {it.cat}
-                  </span>
-                  <h4 className="mt-1 font-serif text-lg font-semibold leading-snug text-pretty group-hover:text-accent transition-colors">
-                    {it.title}
-                  </h4>
-                  <p className="mt-1 font-serif text-sm leading-snug text-foreground/70 line-clamp-2">
-                    {it.excerpt}
-                  </p>
-                  <span className="mt-1 block font-mono text-[10px] uppercase tracking-[0.2em] text-foreground/50">
-                    {it.time}
-                  </span>
-                </div>
-              </article>
+      <div className="mx-auto max-w-[1200px] px-4 py-8">
+        <div className="flex items-center justify-between border-b border-foreground/20 mb-6">
+          <div className="flex items-center gap-1">
+            <span className="font-serif text-lg font-bold text-accent mr-4">MULTIMEDIA</span>
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-4 py-2 text-[11px] font-mono uppercase tracking-wider transition-colors border-b-2 -mb-[2px] ${
+                  activeTab === tab.id
+                    ? "text-accent border-accent"
+                    : "text-foreground/60 border-transparent hover:text-foreground"
+                }`}
+              >
+                {tab.label}
+              </button>
             ))}
           </div>
+        </div>
+
+        <div className="grid grid-cols-12 gap-4">
+          {/* Main media */}
+          <div className="col-span-12 lg:col-span-8">
+            <article className="group cursor-pointer">
+              <div className="relative aspect-video overflow-hidden border border-foreground/15">
+                <Image
+                  src={MEDIA_ITEMS[0].img}
+                  alt={MEDIA_ITEMS[0].title}
+                  fill
+                  className="object-cover sepia-strong transition-transform duration-500 group-hover:scale-[1.02]"
+                />
+                {MEDIA_ITEMS[0].isVideo && (
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-16 h-16 rounded-full bg-foreground/80 flex items-center justify-center">
+                      <div className="w-0 h-0 border-l-[20px] border-l-background border-y-[12px] border-y-transparent ml-1" />
+                    </div>
+                  </div>
+                )}
+              </div>
+              <h2 className="mt-3 font-serif text-xl font-bold leading-tight group-hover:text-accent transition-colors">
+                {MEDIA_ITEMS[0].title}
+              </h2>
+            </article>
+
+            {/* Sub media grid */}
+            <div className="mt-4 grid grid-cols-2 gap-4">
+              {MEDIA_ITEMS.slice(1).map((item, i) => (
+                <article key={i} className="group cursor-pointer">
+                  <div className="relative aspect-video overflow-hidden border border-foreground/15">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-cover sepia-strong transition-transform duration-500 group-hover:scale-105"
+                    />
+                  </div>
+                  <h3 className="mt-2 font-serif text-sm font-semibold leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                    {item.title}
+                  </h3>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <aside className="col-span-12 lg:col-span-4 space-y-4">
+            {/* Banner */}
+            <div 
+              className="relative h-[250px] overflow-hidden border border-foreground/15 bg-paper-dark/30"
+              data-banner-slot="multimedia-sidebar"
+            >
+              <Image
+                src="/images/portrait-1.png"
+                alt="Banner"
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            {/* News list */}
+            <div className="space-y-3">
+              {SIDEBAR_ITEMS.map((item, i) => (
+                <article key={i} className="group cursor-pointer flex gap-3">
+                  <div className="relative w-24 h-16 shrink-0 overflow-hidden border border-foreground/15">
+                    <Image
+                      src={item.img}
+                      alt={item.title}
+                      fill
+                      className="object-cover sepia-strong"
+                    />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h4 className="font-serif text-sm leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                      {item.title}
+                    </h4>
+                    <span className="text-[10px] font-mono uppercase text-foreground/50">{item.source}</span>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </aside>
         </div>
       </div>
     </section>

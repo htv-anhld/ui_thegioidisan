@@ -4,13 +4,11 @@ import { MainNav } from "@/components/heritage/main-nav"
 import { HeroSection } from "@/components/heritage/hero-section"
 import { TickerHeadlines } from "@/components/heritage/ticker-headlines"
 import { SectionTimeNews } from "@/components/heritage/section-time-news"
+import { SectionTrending } from "@/components/heritage/section-trending"
 import { SectionSeaIslands } from "@/components/heritage/section-sea-islands"
-import { SectionCultureMeet } from "@/components/heritage/section-culture-meet"
-import { SectionEthnic } from "@/components/heritage/section-ethnic"
-import { SectionPreservation } from "@/components/heritage/section-preservation"
-import { SectionForumWithSidebar } from "@/components/heritage/section-forum-sidebar"
-import { PhotoGallery } from "@/components/heritage/photo-gallery"
-import { Newsletter } from "@/components/heritage/newsletter"
+import { SectionCategoryGrid } from "@/components/heritage/section-category-grid"
+import { SectionMagazine } from "@/components/heritage/section-magazine"
+import { SectionVideo } from "@/components/heritage/section-video"
 import { SiteFooter } from "@/components/heritage/site-footer"
 
 export default function Page() {
@@ -25,13 +23,11 @@ export default function Page() {
           <HeroSection />
           <TickerHeadlines />
           <SectionTimeNews />
+          <SectionTrending />
           <SectionSeaIslands />
-          <SectionCultureMeet />
-          <SectionEthnic />
-          <SectionPreservation />
-          <SectionForumWithSidebar />
-          <PhotoGallery />
-          <Newsletter />
+          <SectionCategoryGrid />
+          <SectionMagazine />
+          <SectionVideo />
         </main>
         <SiteFooter />
       </div>
