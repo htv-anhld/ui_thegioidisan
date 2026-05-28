@@ -9,7 +9,7 @@ const ITEMS = [
 export function TickerHeadlines() {
   return (
     <div className="border-y border-foreground/20 bg-paper-warm/60">
-      <div className="mx-auto flex max-w-[1280px] items-stretch gap-0 px-0">
+      <div className="mx-auto flex max-w-[1440px] items-stretch gap-0 px-0">
         <span className="flex shrink-0 items-center bg-accent px-4 py-2 font-mono text-[11px] uppercase tracking-[0.25em] text-background">
           Đang nóng
         </span>

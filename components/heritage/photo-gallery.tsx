@@ -11,7 +11,7 @@ const photos = [
 
 export function PhotoGallery() {
   return (
-    <section className="mx-auto max-w-7xl px-6 py-20">
+    <section className="mx-auto max-w-[1440px] px-6 py-20">
       <div className="mb-10 flex items-end justify-between border-b-2 border-double border-sepia/50 pb-4">
         <div>
           <p className="font-mono text-[11px] uppercase tracking-[0.3em] text-rust">Mục VII</p>

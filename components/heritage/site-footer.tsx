@@ -3,7 +3,7 @@ import { Feather } from "lucide-react"
 export function SiteFooter() {
   return (
     <footer className="border-t-2 border-double border-sepia/50 bg-paper-dark/40">
-      <div className="mx-auto max-w-7xl px-6 py-14">
+      <div className="mx-auto max-w-[1440px] px-6 py-14">
         <div className="grid gap-10 md:grid-cols-12">
           <div className="md:col-span-5">
             <div className="flex items-center gap-3">

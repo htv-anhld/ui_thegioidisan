@@ -20,7 +20,7 @@ const SIDE = [
 export function SectionCultureMeet() {
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
+      <div className="mx-auto max-w-[1440px] px-4 py-12">
         <SectionHeading title="Điểm hẹn văn hoá" subtitle="Culture · Festival · Travel" />
         <div className="grid grid-cols-12 gap-6">
           <article className="col-span-12 md:col-span-7 group cursor-pointer">

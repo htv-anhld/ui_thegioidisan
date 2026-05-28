@@ -28,7 +28,7 @@ const ITEMS = [
 export function SectionSeaIslands() {
   return (
     <section className="border-b border-foreground/15 bg-paper-warm/40">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
+      <div className="mx-auto max-w-[1440px] px-4 py-12">
         <SectionHeading
           title="Di sản & Chủ quyền biển đảo"
           subtitle="Sea · Islands · Sovereignty"

@@ -31,7 +31,7 @@ const ITEMS = [
 export function SectionEthnic() {
   return (
     <section className="border-b border-foreground/15 bg-paper-warm/40">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
+      <div className="mx-auto max-w-[1440px] px-4 py-12">
         <SectionHeading title="Dân tộc thiểu số" subtitle="Ethnic Heritage" />
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {ITEMS.map((it, i) => (

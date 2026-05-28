@@ -37,7 +37,7 @@ const ITEMS = [
 export function SectionPreservation() {
   return (
     <section className="border-b border-foreground/15">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
+      <div className="mx-auto max-w-[1440px] px-4 py-12">
         <SectionHeading title="Bảo tồn & Phát triển" subtitle="Preservation & Development" />
 
         <div className="mb-6 flex flex-wrap gap-x-6 gap-y-2 border-b border-dashed border-foreground/30 pb-3">

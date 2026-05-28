@@ -1,5 +1,6 @@
 import Image from "next/image"
 import { SectionHeading } from "./section-heading"
+import { BannerSlot } from "./banner-slot"
 
 const FORUM = [
   {
@@ -53,7 +54,7 @@ const TAGS = [
 export function SectionForumWithSidebar() {
   return (
     <section className="border-b border-foreground/15 bg-paper-warm/40">
-      <div className="mx-auto max-w-[1280px] px-4 py-12">
+      <div className="mx-auto max-w-[1440px] px-4 py-12">
         <div className="grid grid-cols-12 gap-8">
           {/* Forum */}
           <div className="col-span-12 lg:col-span-8">
@@ -147,6 +148,9 @@ export function SectionForumWithSidebar() {
                 Đặt mua →
               </a>
             </div>
+
+            {/* Banner slot in sidebar */}
+            <BannerSlot id="forum-sidebar" width={300} height={250} className="w-full" />
           </aside>
         </div>
       </div>

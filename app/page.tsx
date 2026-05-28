@@ -12,6 +12,7 @@ import { SectionForumWithSidebar } from "@/components/heritage/section-forum-sid
 import { PhotoGallery } from "@/components/heritage/photo-gallery"
 import { Newsletter } from "@/components/heritage/newsletter"
 import { SiteFooter } from "@/components/heritage/site-footer"
+import { FullWidthBanner } from "@/components/heritage/banner-slot"
 
 export default function Page() {
   return (
@@ -25,11 +26,14 @@ export default function Page() {
           <HeroSection />
           <TickerHeadlines />
           <SectionTimeNews />
+          <FullWidthBanner id="after-time-news" height={90} />
           <SectionSeaIslands />
           <SectionCultureMeet />
+          <FullWidthBanner id="after-culture-meet" height={90} />
           <SectionEthnic />
           <SectionPreservation />
           <SectionForumWithSidebar />
+          <FullWidthBanner id="after-forum" height={120} />
           <PhotoGallery />
           <Newsletter />
         </main>
