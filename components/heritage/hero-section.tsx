@@ -16,14 +16,6 @@ const LEFT_NEWS = [
     img: "/images/heritage-3.png",
     title: "Đội tuyển World Cup có tới 25 người đến từ Hà Lan",
   },
-  {
-    img: "/images/heritage-4.png",
-    title: "Casemiro tiếp tục thăng hoa khi lên tuyển Brazil",
-  },
-  {
-    img: "/images/heritage-5.png",
-    title: "Dòng xe nào cần lưu ý khi dùng xăng E10?",
-  },
 ]
 
 const CENTER_NEWS = [
@@ -56,14 +48,6 @@ const RIGHT_NEWS = [
   {
     img: "/images/heritage-5.png",
     title: "Làng nghề truyền thống hồi sinh sau đại dịch",
-  },
-  {
-    img: "/images/heritage-1.png",
-    title: "Du lịch sinh thái - Xu hướng du lịch bền vững",
-  },
-  {
-    img: "/images/heritage-2.png",
-    title: "Các điểm đến không nên bỏ lỡ vào tháng 5",
   },
 ]
 
