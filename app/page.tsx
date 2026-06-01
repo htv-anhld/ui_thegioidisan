@@ -2,9 +2,7 @@ import { TopBar } from "@/components/heritage/top-bar"
 import { Masthead } from "@/components/heritage/masthead"
 import { MainNav } from "@/components/heritage/main-nav"
 import { HeroSection } from "@/components/heritage/hero-section"
-import { TickerHeadlines } from "@/components/heritage/ticker-headlines"
 import { SectionTimeNews } from "@/components/heritage/section-time-news"
-import { SectionTrending } from "@/components/heritage/section-trending"
 import { SectionSeaIslands } from "@/components/heritage/section-sea-islands"
 import { SectionCategoryGrid } from "@/components/heritage/section-category-grid"
 import { SectionMagazine } from "@/components/heritage/section-magazine"
@@ -21,9 +19,7 @@ export default function Page() {
         <MainNav />
         <main>
           <HeroSection />
-          <TickerHeadlines />
           <SectionTimeNews />
-          <SectionTrending />
           <SectionSeaIslands />
           <SectionCategoryGrid />
           <SectionMagazine />
