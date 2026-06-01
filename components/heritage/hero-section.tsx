@@ -57,6 +57,14 @@ const RIGHT_NEWS = [
     img: "/images/heritage-5.png",
     title: "Làng nghề truyền thống hồi sinh sau đại dịch",
   },
+  {
+    img: "/images/heritage-1.png",
+    title: "Du lịch sinh thái - Xu hướng du lịch bền vững",
+  },
+  {
+    img: "/images/heritage-2.png",
+    title: "Các điểm đến không nên bỏ lỡ vào tháng 5",
+  },
 ]
 
 export function HeroSection() {
@@ -117,11 +125,11 @@ export function HeroSection() {
             </article>
           </div>
 
-          {/* Right column - 3 news cards */}
-          <aside className="col-span-12 lg:col-span-3 space-y-3">
+          {/* Right column - 5 news cards */}
+          <aside className="col-span-12 lg:col-span-3 space-y-1">
             {RIGHT_NEWS.map((item, i) => (
-              <article key={i} className="group cursor-pointer">
-                <div className="relative aspect-[4/3] overflow-hidden border border-foreground/10">
+              <article key={i} className="group cursor-pointer flex gap-3 py-2 border-b border-foreground/10 last:border-b-0">
+                <div className="relative w-[80px] h-[55px] shrink-0 overflow-hidden border border-foreground/10">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -129,7 +137,7 @@ export function HeroSection() {
                     className="object-cover sepia-strong transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="mt-2 font-serif text-[13px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-2">
+                <h3 className="flex-1 font-serif text-[13px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-3">
                   {item.title}
                 </h3>
               </article>
