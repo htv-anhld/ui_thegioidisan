@@ -9,12 +9,20 @@ const LEFT_NEWS = [
     title: "Bảng lương giáo viên từ 1/7",
   },
   {
-    img: "/images/heritage-2.png",
-    title: "Học sinh TP.HCM bước vào kỳ thi lớp 10 đông kỷ lục",
-  },
-  {
     img: "/images/heritage-3.png",
     title: "Đội tuyển World Cup có tới 25 người đến từ Hà Lan",
+  },
+  {
+    img: "/images/heritage-4.png",
+    title: "Casemiro tiếp tục thăng hoa khi lên tuyển Brazil",
+  },
+  {
+    img: "/images/heritage-5.png",
+    title: "Dòng xe nào cần lưu ý khi dùng xăng E10?",
+  },
+  {
+    img: "/images/heritage-2.png",
+    title: "Iran dội 'gáo nước lạnh' vào Mỹ",
   },
 ]
 
@@ -45,10 +53,6 @@ const RIGHT_NEWS = [
     img: "/images/heritage-4.png",
     title: "Sách thiếu nhi, sách bóng đá bán chạy tháng 5",
   },
-  {
-    img: "/images/heritage-5.png",
-    title: "Làng nghề truyền thống hồi sinh sau đại dịch",
-  },
 ]
 
 export function HeroSection() {
@@ -69,10 +73,10 @@ export function HeroSection() {
       <div className="mx-auto max-w-[1200px] px-4 py-5">
         <div className="grid grid-cols-12 gap-4">
           {/* Left column - stacked news with thumbnails */}
-          <div className="col-span-12 lg:col-span-3 space-y-1">
+          <div className="col-span-12 lg:col-span-3 flex flex-col justify-between">
             {LEFT_NEWS.map((item, i) => (
-              <article key={i} className="group cursor-pointer flex gap-3 py-2 border-b border-foreground/10 last:border-b-0">
-                <div className="relative w-[80px] h-[55px] shrink-0 overflow-hidden border border-foreground/10">
+              <article key={i} className="group cursor-pointer flex gap-3 py-3 border-b border-foreground/10 last:border-b-0 last:pb-0">
+                <div className="relative w-[72px] h-[72px] shrink-0 overflow-hidden border border-foreground/10">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -80,7 +84,7 @@ export function HeroSection() {
                     className="object-cover sepia-strong transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="flex-1 font-serif text-[13px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-3">
+                <h3 className="flex-1 self-center font-serif text-[15px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-3">
                   {item.title}
                 </h3>
               </article>
@@ -109,11 +113,11 @@ export function HeroSection() {
             </article>
           </div>
 
-          {/* Right column - 5 news cards */}
-          <aside className="col-span-12 lg:col-span-3 space-y-1">
+          {/* Right column - 2 large stacked cards */}
+          <aside className="col-span-12 lg:col-span-3 flex flex-col justify-between gap-4">
             {RIGHT_NEWS.map((item, i) => (
-              <article key={i} className="group cursor-pointer flex gap-3 py-2 border-b border-foreground/10 last:border-b-0">
-                <div className="relative w-[80px] h-[55px] shrink-0 overflow-hidden border border-foreground/10">
+              <article key={i} className="group cursor-pointer flex-1 flex flex-col">
+                <div className="relative aspect-[16/10] overflow-hidden border border-foreground/10">
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -121,7 +125,7 @@ export function HeroSection() {
                     className="object-cover sepia-strong transition-transform duration-500 group-hover:scale-105"
                   />
                 </div>
-                <h3 className="flex-1 font-serif text-[13px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-3">
+                <h3 className="mt-2 font-serif text-[15px] font-medium leading-snug group-hover:text-accent transition-colors line-clamp-2">
                   {item.title}
                 </h3>
               </article>
