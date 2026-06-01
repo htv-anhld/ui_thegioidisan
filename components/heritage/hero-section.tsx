@@ -53,6 +53,10 @@ const RIGHT_NEWS = [
     img: "/images/heritage-4.png",
     title: "Sách thiếu nhi, sách bóng đá bán chạy tháng 5",
   },
+  {
+    img: "/images/heritage-5.png",
+    title: "Làng nghề truyền thống hồi sinh sau đại dịch",
+  },
 ]
 
 export function HeroSection() {
@@ -113,8 +117,8 @@ export function HeroSection() {
             </article>
           </div>
 
-          {/* Right column - 2 news cards + banner */}
-          <aside className="col-span-12 lg:col-span-3 space-y-4">
+          {/* Right column - 3 news cards */}
+          <aside className="col-span-12 lg:col-span-3 space-y-3">
             {RIGHT_NEWS.map((item, i) => (
               <article key={i} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] overflow-hidden border border-foreground/10">
@@ -130,16 +134,6 @@ export function HeroSection() {
                 </h3>
               </article>
             ))}
-
-            {/* Banner slot */}
-            <div 
-              className="relative h-[80px] overflow-hidden border border-foreground/10 bg-paper-dark/20"
-              data-banner-slot="hero-sidebar"
-            >
-              <div className="absolute inset-0 flex items-center justify-center bg-foreground/5">
-                <span className="text-[10px] font-mono uppercase tracking-wider text-foreground/40">Quảng cáo</span>
-              </div>
-            </div>
           </aside>
         </div>
       </div>
