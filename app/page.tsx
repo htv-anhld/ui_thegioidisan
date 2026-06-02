@@ -2,6 +2,7 @@ import { TopBar } from "@/components/heritage/top-bar"
 import { Masthead } from "@/components/heritage/masthead"
 import { MainNav } from "@/components/heritage/main-nav"
 import { HeroSection } from "@/components/heritage/hero-section"
+import { SectionSlider } from "@/components/heritage/section-slider"
 import { SectionTimeNews } from "@/components/heritage/section-time-news"
 import { SectionSeaIslands } from "@/components/heritage/section-sea-islands"
 import { SectionCategoryGrid } from "@/components/heritage/section-category-grid"
@@ -19,6 +20,7 @@ export default function Page() {
         <MainNav />
         <main>
           <HeroSection />
+          <SectionSlider />
           <SectionTimeNews />
           <SectionSeaIslands />
           <SectionCategoryGrid />
