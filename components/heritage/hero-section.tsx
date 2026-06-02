@@ -69,7 +69,7 @@ export function HeroSection() {
   const currentCenter = CENTER_NEWS[centerIndex]
 
   return (
-    <section className="border-b border-foreground/10">
+    <section>
       <div className="mx-auto max-w-[1200px] px-4 py-5">
         <div className="grid grid-cols-12 gap-4">
           {/* Left column - stacked news with thumbnails */}

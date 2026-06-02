@@ -50,14 +50,14 @@ export function SectionSlider() {
   }
 
   return (
-    <section className="border-b border-foreground/10">
+    <section>
       <div className="relative mx-auto max-w-[1200px] px-4 py-6">
         {/* Left arrow */}
         <button
           type="button"
           onClick={() => scroll("left")}
           aria-label="Tin trước"
-          className="absolute left-0 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center border border-foreground/15 bg-background/90 text-foreground/70 transition-colors hover:bg-accent hover:text-background"
+          className="absolute left-4 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center border border-foreground/15 bg-background/90 text-foreground/70 transition-colors hover:bg-accent hover:text-background"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
@@ -67,7 +67,7 @@ export function SectionSlider() {
           type="button"
           onClick={() => scroll("right")}
           aria-label="Tin sau"
-          className="absolute right-0 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center border border-foreground/15 bg-background/90 text-foreground/70 transition-colors hover:bg-accent hover:text-background"
+          className="absolute right-4 top-1/2 z-10 -translate-y-1/2 flex h-9 w-9 items-center justify-center border border-foreground/15 bg-background/90 text-foreground/70 transition-colors hover:bg-accent hover:text-background"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
@@ -75,7 +75,7 @@ export function SectionSlider() {
         {/* Slider track */}
         <div
           ref={scrollRef}
-          className="flex gap-4 overflow-x-auto scroll-smooth px-6 [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="flex gap-4 overflow-x-auto scroll-smooth [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           {SLIDER_ITEMS.map((item, i) => (
             <article
