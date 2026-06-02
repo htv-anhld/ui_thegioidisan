@@ -9,9 +9,9 @@ export function Masthead() {
           <Image 
             src="/images/logo-di-san.png" 
             alt="The Gioi Di San" 
-            width={180} 
-            height={50}
-            className="h-12 w-auto"
+            width={105} 
+            height={30}
+            className="w-[105px] h-auto"
           />
         </a>
 
