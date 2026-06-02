@@ -16,6 +16,8 @@ const ITEMS = [
     img: "/images/heritage-5.png",
     cat: "Khảo cổ",
     title: "Tổng quan về khảo cổ, lịch sử - văn hóa Cù Lao Chàm",
+    description:
+      "Cù Lao Chàm là quần đảo lưu giữ nhiều tầng văn hóa quý giá, từ dấu tích Sa Huỳnh đến hệ thống thương cảng cổ đại, phản ánh vai trò trọng yếu của vùng đất này trên con đường tơ lụa trên biển.",
   },
   {
     img: "/images/hero-heritage.png",
@@ -31,6 +33,11 @@ const ITEMS = [
     img: "/images/heritage-3.png",
     cat: "Bảo tồn",
     title: "Phấn đấu năm 2026 hoàn thành số hóa 100% di sản văn hóa",
+  },
+  {
+    img: "/images/heritage-4.png",
+    cat: "Lịch sử",
+    title: "Hệ thống phòng thủ bờ biển miền Trung qua các thời kỳ lịch sử",
   },
 ]
 
@@ -74,11 +81,16 @@ export function SectionSeaIslands() {
             <h3 className="mt-3 font-serif text-lg font-bold leading-tight group-hover:text-accent transition-colors">
               {ITEMS[0].title}
             </h3>
+            {ITEMS[0].description && (
+              <p className="mt-1.5 text-[12px] text-foreground/65 leading-relaxed line-clamp-3">
+                {ITEMS[0].description}
+              </p>
+            )}
           </article>
 
-          {/* Grid */}
+          {/* Grid - 4 items, 2×2 */}
           <div className="col-span-12 lg:col-span-6 grid grid-cols-2 gap-4">
-            {ITEMS.slice(1).map((item, i) => (
+            {ITEMS.slice(1, 5).map((item, i) => (
               <article key={i} className="group cursor-pointer">
                 <div className="relative aspect-[4/3] overflow-hidden border border-foreground/10">
                   <Image
@@ -94,19 +106,6 @@ export function SectionSeaIslands() {
               </article>
             ))}
           </div>
-        </div>
-
-        {/* Banner */}
-        <div 
-          className="mt-5 relative h-[80px] overflow-hidden border border-foreground/10"
-          data-banner-slot="sea-islands-banner"
-        >
-          <Image
-            src="/images/banner-masthead-right.png"
-            alt="Banner"
-            fill
-            className="object-cover"
-          />
         </div>
       </div>
     </div>

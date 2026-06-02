@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 
 const TABS = [
@@ -14,6 +15,9 @@ const TABS = [
 const MEDIA_MAIN = {
   img: "/images/hero-heritage.png",
   title: "Thay máy ảnh vào cầu Long Biên sau gần 6 tháng trùng tu",
+  description:
+    "Sau gần 6 tháng thực hiện dự án trùng tu, cầu Long Biên đã được lắp đặt hệ thống camera giám sát hiện đại thay thế cho các máy ảnh cũ. Đây là bước tiến quan trọng trong việc bảo tồn và phát huy giá trị di sản lịch sử của Hà Nội.",
+  href: "/bai-viet/thay-may-anh-vao-cau-long-bien",
   isVideo: true,
 }
 
@@ -91,7 +95,7 @@ export function SectionTimeNews() {
       <div className="grid grid-cols-12 gap-5">
         {/* Main video */}
         <div className="col-span-12 lg:col-span-8">
-          <article className="group cursor-pointer">
+          <Link href={MEDIA_MAIN.href} className="group block">
             <div className="relative aspect-video overflow-hidden border border-foreground/10">
               <Image
                 src={MEDIA_MAIN.img}
@@ -107,7 +111,18 @@ export function SectionTimeNews() {
                 </div>
               )}
             </div>
-          </article>
+          </Link>
+          {/* Title block above video */}
+          <div className="mb-3 mt-2">
+            <Link href={MEDIA_MAIN.href} className="group block">
+              <h2 className="font-serif text-lg font-bold leading-tight group-hover:text-accent transition-colors">
+                {MEDIA_MAIN.title}
+              </h2>
+            </Link>
+            <p className="mt-1.5 text-[12px] text-foreground/65 leading-relaxed line-clamp-2">
+              {MEDIA_MAIN.description}
+            </p>
+          </div>
         </div>
 
         {/* Middle list - 6 items */}
@@ -131,9 +146,8 @@ export function SectionTimeNews() {
         </aside>
       </div>
 
-      {/* Title + 3 cards row */}
-      <h2 className="mt-5 font-serif text-lg font-bold leading-tight">{MEDIA_MAIN.title}</h2>
-      <div className="mt-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
+      {/* 3 cards row */}
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
         {MEDIA_CARDS.map((item, i) => (
           <article key={i} className="group cursor-pointer">
             <div className="relative aspect-video overflow-hidden border border-foreground/10">
