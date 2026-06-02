@@ -17,7 +17,7 @@ export function TopBar() {
         </div>
         <div className="flex items-center gap-3">
           <a href="#" className="flex items-center gap-1.5 hover:text-accent transition-colors">
-            <Image src="/images/flag-us.png" alt="English" width={16} height={12} className="opacity-80" />
+            <Image src="/images/flag-us.png" alt="English" width={18} height={14} className="opacity-80" />
           </a>
           <span className="opacity-40">|</span>
           <button

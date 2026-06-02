@@ -10,8 +10,8 @@ export function Masthead() {
             src="/images/logo-di-san.png" 
             alt="The Gioi Di San" 
             width={105} 
-            height={30}
-            className="w-[105px] h-auto"
+            height={35}
+            priority
           />
         </a>
 
@@ -25,7 +25,9 @@ export function Masthead() {
             <Image
               src="/images/banner-masthead-right.png"
               alt="Banner"
-              fill
+              width={675}
+              height={90}
+              priority
               className="object-cover"
             />
           </div>
