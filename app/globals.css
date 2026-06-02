@@ -262,3 +262,27 @@
     mix-blend-mode: multiply;
   }
 }
+
+@layer components {
+  /* Text color utilities */
+  .text-ink { color: var(--ink); }
+  .text-ink-faded { color: var(--ink-faded); }
+  .text-sepia { color: var(--sepia); }
+  .text-rust { color: var(--rust); }
+  .text-gold { color: var(--gold); }
+  .text-paper { color: var(--paper); }
+  .text-paper-dark { color: var(--paper-dark); }
+
+  /* Background color utilities */
+  .bg-paper { background-color: var(--paper); }
+  .bg-paper-dark { background-color: var(--paper-dark); }
+  .bg-ink { background-color: var(--ink); }
+  .bg-sepia { background-color: var(--sepia); }
+
+  /* Border color utilities */
+  .border-ink { border-color: var(--ink); }
+  .border-sepia { border-color: var(--sepia); }
+  .border-ink-faded { border-color: var(--ink-faded); }
+  .border-rust { border-color: var(--rust); }
+  .border-gold { border-color: var(--gold); }
+}
