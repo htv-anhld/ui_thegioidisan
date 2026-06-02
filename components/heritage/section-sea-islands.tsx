@@ -38,8 +38,8 @@ export function SectionSeaIslands() {
   const [activeTab, setActiveTab] = useState("all")
 
   return (
-    <section className="border-b border-foreground/10">
-      <div className="mx-auto max-w-[1200px] px-4 py-6">
+    <div>
+      <div>
         <div className="flex items-center gap-1 border-b border-foreground/15 mb-5">
           <span className="font-serif text-base font-bold text-accent mr-3 pb-2">DI SẢN & BIỂN ĐẢO</span>
           {TABS.map((tab) => (
@@ -109,6 +109,6 @@ export function SectionSeaIslands() {
           />
         </div>
       </div>
-    </section>
+    </div>
   )
 }

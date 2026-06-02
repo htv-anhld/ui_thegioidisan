@@ -5,6 +5,7 @@ import { HeroSection } from "@/components/heritage/hero-section"
 import { SectionSlider } from "@/components/heritage/section-slider"
 import { SectionTimeNews } from "@/components/heritage/section-time-news"
 import { SectionSeaIslands } from "@/components/heritage/section-sea-islands"
+import { ReadSidebar } from "@/components/heritage/read-sidebar"
 import { SectionCategoryGrid } from "@/components/heritage/section-category-grid"
 import { SectionMagazine } from "@/components/heritage/section-magazine"
 import { SectionVideo } from "@/components/heritage/section-video"
@@ -21,8 +22,19 @@ export default function Page() {
         <main>
           <HeroSection />
           <SectionSlider />
-          <SectionTimeNews />
-          <SectionSeaIslands />
+          <section className="border-b border-foreground/10">
+            <div className="mx-auto max-w-[1200px] px-4 py-6">
+              <div className="grid grid-cols-12 gap-6">
+                <div className="col-span-12 lg:col-span-9 space-y-8">
+                  <SectionTimeNews />
+                  <SectionSeaIslands />
+                </div>
+                <div className="col-span-12 lg:col-span-3">
+                  <ReadSidebar />
+                </div>
+              </div>
+            </div>
+          </section>
           <SectionCategoryGrid />
           <SectionMagazine />
           <SectionVideo />
