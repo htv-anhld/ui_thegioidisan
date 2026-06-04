@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { TopBar } from "@/components/heritage/top-bar"
 import { Masthead } from "@/components/heritage/masthead"
 import { MainNav } from "@/components/heritage/main-nav"
@@ -5,6 +6,7 @@ import { HeroSection } from "@/components/heritage/hero-section"
 import { SectionSlider } from "@/components/heritage/section-slider"
 import { SectionTimeNews } from "@/components/heritage/section-time-news"
 import { SectionSeaIslands } from "@/components/heritage/section-sea-islands"
+import { SectionTrendingAlt } from "@/components/heritage/section-trending-alt"
 import { ReadSidebar } from "@/components/heritage/read-sidebar"
 import { SectionCategoryGrid } from "@/components/heritage/section-category-grid"
 import { SectionMagazine } from "@/components/heritage/section-magazine"
@@ -27,6 +29,19 @@ export default function Page() {
               <div className="grid grid-cols-12 gap-6">
                 <div className="col-span-12 lg:col-span-9 space-y-8">
                   <SectionTimeNews />
+                  <div
+                    className="relative h-[80px] overflow-hidden border border-foreground/10"
+                    data-banner-slot="sea-islands-banner"
+                  >
+                    <Image
+                      src="/images/banner-masthead-right.png"
+                      alt="Banner"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <SectionTrendingAlt />
+
                   <SectionSeaIslands />
                 </div>
                 <div className="col-span-12 lg:col-span-3">

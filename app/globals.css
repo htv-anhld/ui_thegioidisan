@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Athiti:wght@200;300;400;500;600;700&display=swap');
 @import 'tailwindcss';
 @import 'tw-animate-css';
 
@@ -37,11 +38,11 @@
 }
 
 @theme inline {
-  --font-sans: var(--font-serif);
-  --font-serif: var(--font-serif);
-  --font-mono: var(--font-typewriter);
-  --font-display: var(--font-display);
-  --font-hand: var(--font-hand);
+  --font-sans: 'Athiti', sans-serif;
+  --font-serif: 'Athiti', sans-serif;
+  --font-mono: 'Athiti', sans-serif;
+  --font-display: 'Athiti', sans-serif;
+  --font-hand: 'Athiti', sans-serif;
 
   --color-background: var(--background);
   --color-foreground: var(--foreground);

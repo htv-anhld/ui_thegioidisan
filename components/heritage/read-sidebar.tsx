@@ -103,7 +103,7 @@ export function ReadSidebar() {
       </div>
 
       {/* Ads placeholder */}
-      <div className="mt-5 flex items-center justify-center border border-dashed border-foreground/20 bg-foreground/[0.03] h-[300px] w-full max-w-[200px] mx-auto">
+      <div className="mt-5 flex items-center justify-center border border-dashed border-foreground/20 bg-foreground/[0.03] h-[300px] w-full max-w-[274px] mx-auto">
         <span className="text-[11px] font-mono uppercase tracking-wider text-foreground/40">Ads 200×300</span>
       </div>
     </div>
